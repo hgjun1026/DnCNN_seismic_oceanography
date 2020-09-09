@@ -45,14 +45,14 @@ python train.py --model 'DnCNN' --batch_size 128 --train_data '../0.data/0.train
 
 Unless you specify the options, the default options will be used.
 
-###Test:
+### Test:
 To test the trained DnCNN model, run with augmentations:
 
 ```bash
 python test.py --set_dir '../0.data/2.test/' --set_names ['noise_added/'] --model_dir './models/DnCNN/' --model_name 'model_020.hdf5' --result_dir 'results'
 ```
 
-###Citation:
+### Citation:
 ```bash
 Jun, H., Jou, H.-T., Kim, C.-H., Lee, S. H., and Kim, H.-J.: Random Noise Attenuation of Sparker Seismic Oceanography Data with Machine Learning, Ocean Sci. Discuss., https://doi.org/10.5194/os-2020-13, in review, 2020.
 ```
