@@ -11,17 +11,17 @@ The programs are based on the "Beyond a Gaussian Denoiser: Residual Learning of 
 ### Requirements:
 The version numbers that were used for the program, and newer version would work fine. 
 
-Keras==2.2.4
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.0
-numpy==1.16.2
-opencv-python==4.1.1.26
-scikit-learn==0.20.3
-scipy==1.2.1
-tensorboard==1.13.1
-tensorflow==1.13.1
-tensorflow-estimator==1.13.0
-tqdm==4.32.1
+Keras==2.2.4   
+Keras-Applications==1.0.8   
+Keras-Preprocessing==1.1.0   
+numpy==1.16.2   
+opencv-python==4.1.1.26   
+scikit-learn==0.20.3   
+scipy==1.2.1   
+tensorboard==1.13.1   
+tensorflow==1.13.1   
+tensorflow-estimator==1.13.0   
+tqdm==4.32.1   
 
 
 ### Data:
