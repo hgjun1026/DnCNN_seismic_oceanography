@@ -53,6 +53,4 @@ python test.py --set_dir '../0.data/2.test/' --set_name 'noise_added/' --model_d
 ```
 
 ### Citation:
-```bash
 Jun, H., Jou, H.-T., Kim, C.-H., Lee, S. H., and Kim, H.-J.: Random Noise Attenuation of Sparker Seismic Oceanography Data with Machine Learning, Ocean Sci. Discuss., https://doi.org/10.5194/os-2020-13, in review, 2020.
-```
