@@ -56,8 +56,5 @@ Unless you specify the options, the default options will be used.
 
 
 ### Citation:
-<<<<<<< HEAD
 Jun, H., Jou, H.-T., Kim, C.-H., Lee, S. H., and Kim, H.-J.: Random Noise Attenuation of Sparker Seismic Oceanography Data with Machine Learning, Ocean Sci. Discuss., https://doi.org/10.5194/os-2020-13, in review, 2020.
-=======
-Jun, H., Jou, H.-T., Kim, C.-H., Lee, S. H., and Kim, H.-J.: Random Noise Attenuation of Sparker Seismic Oceanography Data with Machine Learning, Ocean Sci. Discuss., https://doi.org/10.5194/os-2020-13, in review, 2020.
->>>>>>> 4ebf380feec200ef437adec9580fc2ae5f469c30
+
