@@ -25,16 +25,16 @@ tqdm==4.32.1
 
 
 ### Data:
-0.data/0.train: synthetic training data with 300x300 size
-0.data/1.noise: field noise data with 22431x740 and 22478x780
-0.data/2.test/noise_added: synthetic data with noise for test
-0.data/2.test/original_denoise: synthetic data without noise and synthetic denoised data for comparison
+0.data/0.train: synthetic training data with 300x300 size   
+0.data/1.noise: field noise data with 22431x740 and 22478x780   
+0.data/2.test/noise_added: synthetic data with noise for test   
+0.data/2.test/original_denoise: synthetic data without noise and synthetic denoised data for comparison   
 
 ### Code:
-1.program/cube.txt: size of each data
-1.program/train.py: program for training DnCNN model
-1.program/data_generator.py: training data generation code
-1.program/test.py: program for testing the trained model
+1.program/cube.txt: size of each data    
+1.program/train.py: program for training DnCNN model   
+1.program/data_generator.py: training data generation code   
+1.program/test.py: program for testing the trained model   
 
 ### Training: 
 To train the DnCNN model, run with augmentations:
