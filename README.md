@@ -25,8 +25,8 @@ tqdm==4.32.1
 
 
 ### Data:
-0.data/0.train: synthetic training data with 300x300 size   
-0.data/1.noise: field noise data with 22431x740 and 22478x780   
+0.data/0.train: synthetic training data 
+0.data/1.noise: field noise data   
 0.data/2.test/noise_added: synthetic data with noise for test   
 0.data/2.test/original_denoise: synthetic data without noise and synthetic denoised data for comparison   
 
