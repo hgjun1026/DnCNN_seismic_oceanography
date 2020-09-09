@@ -11,7 +11,8 @@ from skimage.io import imread, imsave
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--set_dir', default='../0.data/2.test/', type=str, help='directory of test dataset')
-    parser.add_argument('--set_names', default=['noise_added/'], type=list, help='name of test dataset')
+    parser.add_argument('--set_name', default='noise_added/', type=str, help='name of test dataset')
+#    parser.add_argument('--model_dir', default=os.path.join('models','DnCNN'), type=str, help='directory of the model')
     parser.add_argument('--model_dir', default='./models/DnCNN/', type=str, help='directory of the model')
     parser.add_argument('--model_name', default='model_020.hdf5', type=str, help='the model name')
     parser.add_argument('--result_dir', default='results', type=str, help='directory of results')
@@ -70,39 +71,38 @@ if __name__ == '__main__':
     if not os.path.exists(args.result_dir):
         os.mkdir(args.result_dir)
         
-    for set_cur in args.set_names:  
-        
-        if not os.path.exists(os.path.join(args.result_dir,set_cur)):
-            os.mkdir(os.path.join(args.result_dir,set_cur))
-        psnrs = []
-        ssims = [] 
-        
-        for im in os.listdir(os.path.join(args.set_dir,set_cur)): 
-            if im.endswith(".bin"):
-                fin = open(os.path.join(args.set_dir,set_cur,im),"rb")
-                x = np.fromfile(fin,dtype=np.float32)
-                fin.close()
+    set_name = args.set_name    
+    if not os.path.exists(os.path.join(args.result_dir,set_name)):
+        os.mkdir(os.path.join(args.result_dir,set_name))
+    psnrs = []
+    ssims = [] 
+    
+    for im in os.listdir(os.path.join(args.set_dir,set_name)): 
+        if im.endswith(".bin"):
+            fin = open(os.path.join(args.set_dir,set_name,im),"rb")
+            x = np.fromfile(fin,dtype=np.float32)
+            fin.close()
 
-                x = x.reshape(-1,496)
-                y = x 
-                y = y.astype(np.float32)
-                y_  = to_tensor(y)
-                start_time = time.time()
-                x_ = model.predict(y_) # inference
-                elapsed_time = time.time() - start_time
-                print('%10s : %10s : %2.4f second'%(set_cur,im,elapsed_time))
-                x_=from_tensor(x_)
-                if args.save_result:
-                    name, ext = os.path.splitext(im)
+            x = x.reshape(-1,496)
+            y = x 
+            y = y.astype(np.float32)
+            y_  = to_tensor(y)
+            start_time = time.time()
+            x_ = model.predict(y_) # inference
+            elapsed_time = time.time() - start_time
+            print('%10s : %10s : %2.4f second'%(set_name,im,elapsed_time))
+            x_=from_tensor(x_)
+            if args.save_result:
+                name, ext = os.path.splitext(im)
 
-                    fout1 = open("./%s/%s/%s_dncnn.bin"%(args.result_dir,set_cur,name),"wb")
-                    fout2 = open("./%s/%s/%s_noise.bin"%(args.result_dir,set_cur,name),"wb")
-                    xxx = np.float32(x_)
-                    yyy = np.float32(y)
-                    xxx.tofile(fout1)
-                    yyy.tofile(fout2)
-                    fout1.close()
-                    fout2.close()
+                fout1 = open("./%s/%s/%s_dncnn.bin"%(args.result_dir,set_name,name),"wb")
+                fout2 = open("./%s/%s/%s_noise.bin"%(args.result_dir,set_name,name),"wb")
+                xxx = np.float32(x_)
+                yyy = np.float32(y)
+                xxx.tofile(fout1)
+                yyy.tofile(fout2)
+                fout1.close()
+                fout2.close()
     
 
     

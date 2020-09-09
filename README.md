@@ -49,7 +49,7 @@ Unless you specify the options, the default options will be used.
 To test the trained DnCNN model, run with augmentations:
 
 ```bash
-python test.py --set_dir '../0.data/2.test/' --set_names ['noise_added/'] --model_dir './models/DnCNN/' --model_name 'model_020.hdf5' --result_dir 'results'
+python test.py --set_dir '../0.data/2.test/' --set_name 'noise_added/' --model_dir './models/DnCNN/' --model_name 'model_020.hdf5' --result_dir 'results'
 ```
 
 ### Citation:
