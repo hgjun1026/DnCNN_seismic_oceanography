@@ -1,4 +1,4 @@
-#Random Noise Attenuation of Sparker Seismic Oceanography Data with Machine Learning
+# Random Noise Attenuation of Sparker Seismic Oceanography Data with Machine Learning
 
 Hyunggu Jun, Hyeong-Tae Jou, Chung-Ho Kim, Sang Hoon Lee, Han-Joon Kim
 
