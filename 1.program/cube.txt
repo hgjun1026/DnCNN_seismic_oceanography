@@ -1,3 +1,4 @@
-training_data: 300x300
+#size=(nx,nz)
+training_data: 300x300 / 300x201
 noise_data: 22431x740 (noise01.norm), 22478x740 (noise02.norm)
 test_data: 2000x496 
